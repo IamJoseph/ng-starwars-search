@@ -1,0 +1,10 @@
+<div class="inputContainer">
+  <h1>Angular Star Wars Character Search</h1>
+  <input class="peopleSearch" placeholder="e.g. Anakin Skywalker" #box (keyup)="onKey(box.value)" />
+  <!-- <p>{{values}}</p> -->
+  <ul>
+    <li *ngFor="let character of characters$">
+      <a routerLink="/people/{{character.name}}">{{ character.name }}</a>
+    </li>
+  </ul>
+</div>
